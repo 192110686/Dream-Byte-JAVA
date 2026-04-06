@@ -1,0 +1,268 @@
+Topic 1: Why OOP Came Even Though Java Basics Existed:
+----------------------------------------------
+eg:
+ Take inputs 
+store values in variables 
+use conditions
+use loops 
+
+public class Main{
+public static void main(String[] args) {
+
+String studentName1 = "Vishnu";
+int studentAge1 = 20;
+int studentMark1 = 85;
+//-------------------------
+String studentName2 = "Vishnu";
+int studentAge2 = 20;
+int studentMark2 = 85;
+//----------------------------
+String studentName3 = "Vishnu";
+int studentAge3 = 20;
+int studentMark3 = 85;
+
+System.out.println("Name: " + studentName);
+System.out.println("Age: " + studentAge);
+System.out.println("Marks: " + studentMark);
+}
+}
+
+Reason:
+-------------
+OOP came mainly to organize and manage the code better.
+
+Problem in basic Programming:
+------------------
+
+Can we create separate variables for 1000 students manually?
+
+yes / no??
+
+problems :
+----------------
+confusing, difficult to manage, too many variables, hard to update, hard to debug
+
+OOP's -> helps us to organize data and actions together in one place 
+
+Note: Programming also started following real life 
+
+eg: student, employee, car, mobile etc ...
+ Each one has :
+     1. Data 
+     2. Behaviour
+
+ Student:
+---------------
+Data:
+---------
+1. Name
+2. Age
+3. Mark
+
+Behaviour:
+------------------
+1. attend class 
+2. Write notes
+3. maintaining dress code 
+
+Car:
+-------------
+Data:
+-----------
+1. company name
+2. colour
+3. speed
+
+Behaviour:
+--------------
+1. mileage
+2. start
+3. stop
+
+What does OOP's says-> Group the related data and related actions together.
+
+In real life, a car has only data or both data and actions??
+
+Difference between Procedural Thinking and OOP Thinking?
+-------------------------------------------------
+Before OOP:
+-----------------
+separate variables
+separate functions
+manage everything independently
+
+In OOP:
+---------------
+create a model of a real world thing
+keeps its data and actions together
+use objects 
+
+Java basics teach us how to write the code.
+OOP teaches us how to organize code.
+
+What is main advantage of OOP??
+writing code or organizing code better??
+
+Is OOP mainly useful for very tiny programs or large real world applications??
+
+Large real world applications 
+
+Real World need of OOP:
+------------------
+banking system,
+hospital management system
+school management system
+e-commerce website
+employee management system
+
+Bank:
+-----------
+Data:
+--------
+account holder name
+account number
+balance
+
+Behaviour:
+---------------
+withdraw()
+deposit()
+transfer()
+loan approval/rejection()
+check balance()
+
+Why Java Uses OOP:
+------------------
+Java is called as an Object-Oriented Programming language because java mainly follows OOP concepts to build applications.
+In Java:
+
+1. we create classes
+2. from classes we create objects
+3. inside them we keep variables and methods 
+
+That is why OOP is the "heart of Java".
+
+Main reasons OOP Came:
+---------------------------
+1. Basic programming becomes messy for big applications.
+2. Too many variables and functions become hard to manage 
+3. Real-world things need real-world modeling
+4. Data and actions should stay together
+5. code should be reusable 
+6. code should be easy to maintain and update 
+7. Large programs need better structure.
+
+
+Questions:
+-------------------
+For small programs, is basic programming okay??
+ans) Yes
+2. For large programs does managing separate variables become difficult?
+ans) Yes 
+3. OOP groups what two things together?
+ans) Data and behaviour 
+4. Why is OOP close to real luife?
+ans)  Because real worls things are treated as objects 
+
+What is OOP:
+--------------------
+OOP stands for Object-Oriented Programming.
+In simple words:
+----------------
+OOP is a programing approach that uses classes and objects to organize data and behaviour together.
+
+To achieve OOP, we mainly use two things:
+ 1. Class
+2. Object 
+
+Class:
+---------------
+Class is a blueprint or template, design uses to create objects.
+A class is like a plan for creating objects.
+
+Car??
+car design/model = class 
+Real car = object 
+
+Object:
+----------------
+it is an Instance of a class 
+or a real world thing.
+
+String a = "Reshma";
+String studentName = "Reshma";
+
+Class came to group reated data and behavious in one sturture .
+What does a class contains?
+-----------------------------
+Variables
+methods
+
+Variables: -> Data 
+------------
+Store the data 
+
+methods:-> Behaviour 
+----------------
+These define the behaviour
+Class Syntax?
+------------------
+class ClassName{
+  //variables
+  //methods
+}
+
+class ->class is the keyword
+className -> Name of the class 
+inside this curly braces {} we write the members of the class 
+
+eg:
+ class Student {
+String name;
+int age;
+int mark;
+void study(){
+System.out.println("Student is studying");
+}
+}
+
+eg:
+class MobilePhone{
+String name;
+double price;
+call(){
+}
+batteryPerformance(){
+}
+}
+
+A class is important because without is, creating similar objects becomes difficult.
+
+
+Which one is created from class?
+ans) object
+
+which one is template? 
+ans)class 
+
+object:
+---------------
+it is the real instance
+created from class
+holds the actual values
+
+methods:
+------------
+Static vs instance variables
+Static vs instance methods 
+
+OOPS PILLARS :
+------------------
+1. Abstraction
+2. Encapsulation
+3. Inheritance
+4. Polymorphism 
+
+
+
+

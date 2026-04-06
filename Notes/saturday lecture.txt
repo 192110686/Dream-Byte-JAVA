@@ -1,0 +1,165 @@
+✅ 10–15 min recap (for missed students)
+1) What is a Program? (1 min)
+
+Say:
+“A program is simply a set of instructions we give to a computer to do a task.”
+
+Example:
+“Like steps to make tea: boil water → add tea → add sugar → serve.”
+
+2) What is Programming? (1 min)
+
+Say:
+“Programming is the process of writing those instructions in a proper way.”
+
+Example:
+“When you write the tea steps clearly so anyone can follow, that’s like programming.”
+
+3) What is a Programming Language? (2 mins)
+
+Say:
+“Computer doesn’t understand English/Tamil/Malayalam. It needs instructions in a language it understands.”
+
+So, programming language is:
+“A special language used to write programs.”
+
+Example:
+“Like Google Translate helps people understand, programming languages help humans talk to computers.”
+
+4) What is Java? (2 mins)
+
+Say:
+“Java is a programming language used to build many types of applications.”
+
+Use line:
+“Java is popular because it’s strong, safe, and used in many real companies.”
+
+5) Why Java? (3 mins)
+
+Keep it to 4 simple points:
+
+Easy to learn for beginners (compared to low-level languages)
+
+Very common in jobs (many companies use Java)
+
+Used in many areas (web apps, Android, backend, banking)
+
+Good foundation (OOP concepts are strong)
+
+(You already explained platform independence before, so just mention it in 1 line if needed.)
+
+6) Uses of Java (2 mins) — tell like a story
+
+Ask them: “Where do you think Java is used?” then reveal:
+
+Banking apps (secure systems)
+
+Backend of websites (server side)
+
+Android apps (many apps)
+
+Big company software (enterprise)
+
+🎯 Mini interactive activity (2 mins) — makes recap fun
+“Tell me the category”
+
+Ask them to type in chat:
+
+“Tea steps = program or programming?” → Program
+
+“Writing those steps properly = ?” → Programming
+
+“Java, Python, C are?” → Programming languages
+
+This wakes the whole class up.
+
+
+
+
+1) Why Java is Platform Independent? (1–2 mins)
+
+Say:
+“Platform independent means: we write Java code once, and it can run on Windows, Mac, or Linux.”
+
+Simple reason (no heavy terms):
+“Because Java doesn’t run directly on the computer. It runs through JVM. JVM is available for each operating system.”
+
+Example:
+“Like watching YouTube — same video works on Android, iPhone, laptop because the app/browser supports it.”
+
+2) Java vs Other Languages (2 mins) — keep it friendly
+
+Say:
+“Different languages are used for different purposes, like different tools.”
+
+C → very fast, close to hardware (but harder for beginners)
+
+Python → very easy, great for AI/data, but can be slower
+
+Java → balanced: strong, structured, very common in companies
+
+One-line takeaway:
+“Java is famous for big company projects because it is structured + secure + scalable.”
+
+3) What is Object-Oriented? (2–3 mins)
+
+Say:
+“Object-oriented means we write programs by thinking in terms of real-world objects.”
+
+Example:
+
+Class = blueprint (Car design)
+
+Object = real car (BMW car)
+
+OOP gives 3 big benefits (simple words):
+
+Reusability (use code again)
+
+Easy to manage (organized)
+
+Easy to expand (add features later)
+
+Fun question to ask:
+“Give me any real-world object?” (phone, fan, bottle)
+Then you say: “Good — later we’ll make classes for these.”
+
+
+
+✅ Then smoothly transition to tomorrow’s main topic
+
+Say this line:
+“Now that everyone is on the same page, today we’ll learn how Java runs inside the computer and set up Java properly.”
+
+Then you start:
+.java → compiler → .class (bytecode) → JVM → output
+
+
+
+✅ (Add in recap) Who invented Java? When? Who manages it now?
+Who invented Java?
+
+Java was designed by James Gosling (often called the “father of Java”) while working at Sun Microsystems.
+
+When did they start and when was it released?
+
+Work on Java started around 1991 (as part of a project at Sun).
+
+Java was first released in 1995 (Java’s initial release date is widely recorded as May 23, 1995).
+(Some beginner resources mention the first public version in 1996, but Java’s original release is 1995.)
+
+What was Java called before “Java”?
+
+Java was initially called Oak (then the “Green” project) before it was renamed to Java.
+
+Who manages Java now?
+
+Today, Oracle is the main steward/owner of Java (Oracle acquired Sun Microsystems in 2010).
+And the open-source reference implementation is OpenJDK, which is widely used.
+
+Super-simple way to say this in class (30 seconds)
+
+“Java was designed by James Gosling at Sun Microsystems. Work started in 1991 and it was released in 1995. Earlier it was called Oak. Now Oracle manages Java, and OpenJDK is the open-source version many people use.”
+
+
+

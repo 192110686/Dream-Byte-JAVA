@@ -1,0 +1,155 @@
+Access Modifiers:
+------------------
+Access modifiers decide who can access a variable, method, class.
+
+They are used for :
+-> control
+-> security
+-> restricting unnecessary acess
+
+public   -> can be accessed from anywhere 
+private  -> can be accessed only inside the same class.
+default  -> if no modifier is written, it can be accessed only inside the same package.
+protected-> can be accessed in the same package and also in the subclass  
+
+programs:
+
+class student{
+String studentname;
+}
+class employee{
+
+}
+
+software:
+laptop{
+}
+desk{
+}
+
+public = open to all
+private = only inside class 
+default = only package 
+protected = package + child class/sub class 
+
+
+class Demo{
+public int a = 10; -> a can be accessed anywhere
+private int b = 20; ->b only inside Demo
+int c = 30; -> c only in same package 
+protected int d = 40;
+public class Main{
+public static void main(String[] args){
+
+}
+}
+}
+class Phone{
+}
+which access modifier gives highest restriction??
+ans) private 
+
+which access modifier is open everywhere?
+ans) public
+if we write no modifier, what it is called?
+ans) default 
+
+protected is useful mainly in which concept later?
+inheritance 
+
+private
+default
+protected
+public 
+
+
+Constructors:
+----------------------------
+how do we create an object??
+classname objectname = new classname();
+
+initialization:
+-------------------
+setting the initial data/state of the object
+just buying the phone = object creation
+name, language, wallpaper= initialization
+
+creation = making the object
+initialization = giving it first values 
+
+class Student{
+String name; 
+int age;
+Boolean pass ;// default value = null
+}
+public class Main{
+public static void main(String[] args){
+Student s1 = new Student(); //s1 -> object creation
+//s1.name ="Uday";
+}
+}
+
+Definition:
+--------------
+A constructor is a special member used to initialize an object. -> initialize is nothing giving its first value 
+
+Constructor Syntax:
+-------------
+class ClassName{
+ClassName(){
+}
+}
+
+notes:
+------------------
+1. Constructor name must be same as class name
+2. Constructor has no return type
+3. it runs automatically when an object is created.
+
+class Marker{
+String name;
+int expiry;
+Marker(String name, int expiry) {
+syso("Constructor called");
+}
+public class Pen{
+public static void main(String[] args){
+Marker s1 = new Marker("Vishnu",20); //s1 -> object creation
+s1.name = "Vishnu";
+
+}
+}
+
+Constructor it is not a method:
+-------------------------
+public void add(){
+}
+Student(){
+}
+Types in Constructor:
+------------------------
+1. Default Constructor
+2. Parameterised Constructor
+3. Copy Constructor 
+
+1.Default Constructor:
+-------------------------------
+A constructor with no parameters is called a default constructor
+
+Student(){
+}
+
+2. Parameterised Constructor:
+----------------------------
+
+
+
+
+
+
+
+
+
+
+
+

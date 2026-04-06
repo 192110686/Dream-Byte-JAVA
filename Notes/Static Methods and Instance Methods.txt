@@ -1,0 +1,48 @@
+Static & Instance Methods
+-------------------------------
+Static Variables -> belongs to the class 
+Instance variables -> belongs to the object
+ 
+Static methods ->
+---------------------
+these methods belongs to the class 
+String name="Riyaz";
+String bankName="HDFC";
+static void displaybank(){
+syso(" Bankname " + bankName);
+}
+Bank vishnu= new Bank();
+Vishnu.name="Balineni";
+Bank megha = new Bank();
+megha.displaybank();
+
+Method:
+--------------
+returntype methodName(){
+   //statements
+}
+double add(5, 7) {
+return 5+7;
+}
+
+int a = 10
+double b = a;
+syso(b);
+
+10 + 0.0 = 10.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

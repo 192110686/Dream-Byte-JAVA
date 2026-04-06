@@ -1,0 +1,106 @@
+Static Variables and Instance Variables:
+--------------------------------------------
+1 instance 
+2. static 
+
+Instance Variable:
+-------------------------
+An instance variable is an variable that belongs to an object.
+Instance -> object 
+eg:
+ class Student {
+String name;
+int age;
+static String college_name="Chaitanya";
+}
+Student s1 = new Student();
+s1.name="Megha";
+s2.age = 23;
+
+
+Why Instance Variables?
+----------------------
+they are called as instance variables because they belong to an instance , instance means an object
+class = blueprint
+object = instance
+variable belonging to object = instance variable
+
+instance means what in OOp?
+
+Static Variable:
+------------------------
+A static variable is a variable that belongs to the class, not to individual objects.
+
+only one common copy of a static variable is shared by all objects.
+
+This means:
+no separate copy for each object
+one common value for entire class 
+
+class -> related variables -> static -> one common copy for all objects
+object -> related variables -> instance -> it has separate copy for each object
+
+When to use :
+-------------
+-> if the value changes from object to object, use instance variables.
+-> if the value is same for all objects, use static variables.
+
+String name;
+static String country;
+
+How to access instance and static variables:
+-----------------------------------------
+Instance variable:
+---------------------
+Access using the object name 
+s1-> object name 
+s1.name ="data";
+syso(s1.name);
+
+Static variable:
+---------------------
+we can access using the object name too
+but best practice using class name
+
+Why not make everything static?
+-----------------------------
+
+oops -> 6 principles 
+class
+object
+method -> types
+static variables
+instance variables
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

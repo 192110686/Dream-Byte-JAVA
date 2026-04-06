@@ -1,0 +1,1578 @@
+RISE - Every Step Towards Success
+
+PROGRAM - A program is a set of instructions we give to a computer to do a particular task
+PROGRAMMING - Programming is a process of writing those instructions in a proper way.
+PROGRAMMING LANGUAGE - ITS A Special language to write the programs
+ why java ???
+   -> platform independent
+USES of java --
+backend apps develop
+functionality to a application
+
+OBJECT ORIENTED - dealing with the real life things
+class - car design  - real world thing
+object -  bmw - instance of an class
+
+
+---
+
+ JAVA EXECUTION -
+  FLOW --->
+
+---
+
+.java -> compiler -> .class(Bytecode) -> JVM ->Output
+
+---
+
+Source code :
+---
+code written by us (progarmmers)
+
+java term : your source code is saved as the .java file
+
+2.Compiler :
+---
+compiler is a program that checks your code for errors and converts it into the another form (.class)
+
+javac - java compiler
+
+3.BYTECODE :
+---
+0's and 1's  (.class file )
+located in the bin folder
+
+JAVA VIRTUAL MACHINE :
+---
+its just a software that runs the java bytecode(.class file) and produces the respective output.
+Meaning - JVM is the runner / executor.
+
+why imp????
+.class cannot run directly on your laptop - > depends on jvm
+what happens if jvm is not there ???
+-> java is not recognized or could not find the runtime
+
+single line ----> JVM is the runner of java programs
+
+JRE -(Java Runtime Environment)
+JRE is the runtime package that contains the JVM + Java libraries needed to run the java programs
+JRE = it give sthe run support
+
+why??
+printing - System.out.println
+built-in classes
+who provide's this ?? Java libraries which comes with JRE
+ single line - >> JVM + Java libraries
+eg.: java.util.Scanner;--? Scanner - class
+
+what happens if its not there ??
+
+kitchen setup --> JRE
+CHEF - > JVM ( runs the programs) eg: they can cook
+support things -> vessesl, gas etcc... Java Libraries
+so JRE is the "full running environment"
+
+"JRE IS WHAT YOU NEED TOP RUN THE JAVA PROGRAMS "
+
+JDK -->> Java Development Kit
+---
+JDK is the full kit used to write, compile, and run the java programs .
+it includes :
+    -> JRE (JVM + Libraries )
+    -> Compiler (javac)
+    -> other developer tools
+
+IF NO JDK -> you can't build
+
+JDK is required top write and run the java programs
+
+summary-----
+JVM -> Runs the java programs
+JRE -> JVM + libraries to run
+JDK -> JRE + tools to write (compiler)
+
+install -> JDK
+
+who runs the .class file?? -> JVM
+what do we need only to run?? -> JRE
+what do we need to write + run?? -> JDK
+ -----------------------conclude--------------------
+
+
+
+
+
+
+
+
+ SUNDAY CLASSS
+---
+
+
+
+WHERE JAVA IS USED??
+BANKING APPS
+->E - COMMERCE APPS
+-> ANDROID
+-> WEB APPLICATUIONS
+
+CLASS
+---
+
+A class is a blueprint or container
+
+house plan-> class
+actual house -> object
+
+School -?class
+Students -?object
+
+java code
+---
+public class School{
+}
+Access modifiers
+->public
+->private
+->protected
+
+can we write java code outside the class?
+java wants everything to be organised so no loose code allowed.
+---
+public class School{
+public static void main(String[] args){
+// sentences
+}
+}
+
+---
+Method??
+ it is a block of code that performs particular/ONE task
+ ex:
+washing machine->?wash
+mobile camera-> photo/vides
+calculator-> performs operations
+
+
+ public int add(10, 3){
+ return 10+3;
+}
+add->method name ()
+
+one method = one job . This keeps code clean
+
+ can a method do many unrelated tasks??
+
+Main Method
+---
+Among all methods, ONE is special. That is "main()"
+so main() is the starting point of an execution.
+ 
+movie ->
+main()
+
+which method starts the execution??
+public static void main(String[] args){
+
+}
+
+public
+---
+Access modifiers
+public - it measn accessible from anywhere /outside.
+ 
+static
+void
+string[] args
+what happens if i remove public ??
+public--> accessible to all
+
+2. Static
+---
+static means java can run this method without craeting an object .
+
+the programs hasn't created naything yet. so java needs a way to start directly.
+
+the bell rings for evryone without first creating a student.
+
+3. Void
+---
+void means the method return nothing
+can main return int??
+main's job is to start and run the program, not to send a value back.
+
+4.1.String[] args
+---
+args is a list of strings that can receive values when starting the programs
+eg :
+ game setting at start
+
+main = start
+public = JVM can access
+static = start/run without object creation
+void = no return type
+args = extra input later
+
+Variables
+---
+
+rice - data
+box - varibale
+shelf - memory
+
+variable stores the data
+ computer memory is like cupboards. variable is the container or the label .
+
+int age = 21 ;
+int age =22;
+age = hfxx36
+
+why we need variables  -> store the changing data
+
+data types
+---
+data type tells us what kind of value
+int - 4 bytes  -123
+float - 4 bytes - 123.56 = 2.5 = 3.3/3.55
+long - 8 bytes - 126273
+char - 2 bytes - 'q''y',
+double - 8 bytes -1234.769682786= 10/3 = 3.544397= accurate
+short - 2 bytes
+byte - 1 bytes
+boolean - true or false
+ 1 byte = 8 bits  2^8 =256 values
+1 bit = 0 or 1  / 2 power 1  =2
+
+1 byte range = -128 to +127
+byte age = 100;
+---
+int - range
+ 1 = 8 bits
+4 bytes = 8*4 = 32
+2^32 = int range 2147
+minimum value = -2^(n-1)= -2^31=naveen=-2147483648
+maximum value = 2^(n-1)-1=(2^31)-1=vishnu =2147483647
+
+---
+data types
+primitive data type
+non-primitive data type
+
+
+primitive data - 8 types
+---
+byte
+short
+int
+long
+float
+double
+char
+boolean
+  these data types store single or simple values.
+---
+2. non - primitive types - 4 types
+
+string
+arrays
+classes
+objects
+
+non primitive types can store more data and have methods
+
+age = "reshma"
+age[] = {123,1333333333}
+123 byte = 8 bits
+123 int = 32 bits
+
+Scanner
+---
+taking input from user
+
+code :
+class demo{
+public static void main(String[] args){
+Scanner sc = new Scanner(System.in);
+String name = sc.nextInt();
+}
+}
+
+
+---
+calculator - >
+2 3 + = 5
+input-> process-> output
+
+ OUTPUt
+---
+END
+oUTPUT MEANS TEH RESULT SHOWN BY TEH PROGRAM OR SCREEN
+
+
+WHY we need Output
+3 types :
+---
+1.println
+2.print
+3.printf
+
+-> to show the result
+-> to check values (debug)
+-> to communicate with the user
+
+println(System.out.println)
+---
+My name is Vishn, I am from Andhra
+
+2. My name is Vishnu,
+   I am, from andhra
+
+System.out.println("My name is Vishnu");
+System.out.println("I am from Andhra");
+
+Where :?
+-> most common printing
+-> when u wnat the result in a separate line
+
+-> Print:
+---
+My name is Megha, I am from Tamil nadu , I Like playing video games,
+ output prints in the same line .
+System.out.print("Ab");
+System.out.print("Reshma");
+output:
+---
+Ab Reshma
+Where to use : Important
+---
+System.out.print("Enter your name:");
+Enter your name:Harshini
+
+Question?
+which one is better for "Enter your age :" prompt? -> println vs print
+
+System.out.println("student mark 1" + 23);
+System.out.println("Enter student mark 2");
+System.out.println("Enter student mark 3");
+System.out.println("Enter student mark 4");
+Output:
+student mark 1 :
+ 23
+Enter student mark 2 :
+ 24
+Enter student mark 3 :
+ 56
+Enter student mark 4 :
+67
+
+System.out.println("Enter students marks of 4 subjects :");
+print -> 12131415
+println -> 12
+           13
+           14
+           15
+           16
+
+3. printf(System.out.printf) - > neat printing
+
+97.7685747680
+97.8
+
+Syntax :
+---
+"%d" -> int numbers
+%f -> double
+%.nf -> double with n decimals (n-> anyu numbers eg : 2,3,4,5)
+%s -> String
+.\n -> new line /next line
+
+output > /n
+
+eg:
+System.out.printf("Age: %d\n",21);
+
+System.out.printf("Name: %s\n", "Reshma");
+
+eg:
+System.out.printf("%s","Reshma" )
+Note:
+2. when using the println do not use the output formatters eg : (%d,%f,%s)
+
+Summary :
+print=same line
+println=next line
+printf=neat format
+
+Input :
+---
+
+Scanner input methods :
+---
+each qunatity -> no of items
+1/3 -> 0.3333-> soups -> decimla-> either float or double
+2 -> 1 -> chickemn drums -> integer
+brownie -> string
+
+-> Types :
+nextLine();
+nextInt();
+nextDouble();
+next();
+next().charAt(n);
+
+1.nextLine();
+---
+Definition: reads full line text(including spaces)
+ex: Dama Megha Vardhan
+
+Scanner sc = new Scanner(System.in);
+how to use objects:
+   object.method name  eg: sc.nextLine();
+
+String name = sc.nextLine();
+System.out.println(name);
+
+where :
+1.full details or sentences
+2. works  for storing any kind of lengthy data
+
+2. nextInt(); int -> whole number
+---
+reads only the whole number -> 0 to n
+23.67 not works
+string data eg:reshma not works
+   eg: int age = sc.nextInt();
+
+3. nextDouble() -> double (decimal)
+---
+eg: double age = 23;
+age=23.0
+-> only to store the double value
+-> double age = twenty three (it will not work)
+-> we can store the whole numbers too, but they will be converted to decimal values and then gets stored.
+
+4 next()-> single word(short text)
+-> reshma, vishnu, age, text
+eg: String word = sc.next();
+  Sri Reshma
+
+5. char input using the next().charAt(index)
+ is your age >18 (y/n):y e s / now
+                       0 1 2
+index -> 0 to n-1 eg: 10 letters -> 0 to 9
+question:
+ what is "Neelima"  charAt(4) ? i out of index -> 0 to 6 -> index.outofbouds exception
+
+note :
+ buffer
+
+after nextInt()/nextDouble()/next we have to use nextLine()
+int age = sc.nextInt();
+23
+String city= sc.nextLine();
+mumbai
+
+output:
+23
+Mumbai
+mumbai
+
+
+-----------------------------------------------------------------
+last class preview: we can able to talk to computer....
+next we must make it to think and decide 
+
+OPERATORS:
+------------
+what do u mean by operators??
+An operator is an symbol that tells the computer to perform an action on operands 
+2 + 3 =>
+2 & 3 -> operands 
++ -> operator 
+
+TYPES OF OPERATORS:
+-------------------------
+8 types:
+1. Arithmetic operator
+2. Relational 
+3. Logical 
+4. Assignment
+5. Unary 
+6. Bitwise
+7. Ternary 
+8. instanceof Operator 
+-------------------------------
+1. Arithmetic operator:
++,-,*,/,%
+when -> addition.sub.mul,div,mod
+modulus -> remainder 
+10%3 ->?? 1 
+equal share -> 3 person -> total 10 chocolates 
+megha -> 3 
+harshini-> 3
+Naveen -> 3 
+ balance ->?? 1 
+
+------------------------------
+2. Relational(comparison)
+operators : ==, !=,>,<,>=,<= 
+ when it is needed to compare two values 
+result is always true or false 
+mostly used in decision making statements-> conditional statements 
+22!=18 -> true , false
+
+----------------------------------------------
+3. Logical
+used when to combine two or more conditions 
+result -> Boolean -> true/false 
+operators :
+&&,||,!
+eg: 10>5 && 8>3
+10>5 -> true 
+8>10 -> false 
+result -> false 
+
+||-> if either of the condition is true 
+10>5 -> false 
+8>10 -> false 
+result -> false 
+
+!-> 1-> 0
+0-> 1
+!true -> 
+age = false ;
+!age=true
+---------------------  
+ 4. Assignment
+used to assign a value or modify(change) the existing value 
+operator -> =,+=,-=,*=,/=,%=
+int x = 10;
+x = x+1;=11
+x = x-1;=9
+x = x*1=10
+x+=1;
+x-=1;
+
+-------------------------
+5. Unary 
+unary operators operate only on one operand 
+used for -> increment, decrement or logical negation
+operators : ++,--,+,-,!
+++
+a=5;
+a++;
+a=a+1;
+a=6;
+a=7;
+a--
+a=a-1;
+a=6
+unary plus : + (shows only positive values )
+int a =+5;
+o/p-> 5
+unary minus : 
+it helps in changing the sign of the value
+int a =+5;
+o/p->-5
+logical not!->
+to reverse a Boolean value :
+Boolean age = true ;
+syso(!age)-> false 
+-----------------------
+6. Bitwise
+
+it is used to perform operations at binary level (bit)
+&,|,^,~,<<,>>
+
+--------------------
+7. Ternary 
+short - hand replacement for if-else statements:
+marks =40;
+
+if(marks>=60){
+syso("pass");
+}
+else{
+syso("fail")
+}
+
+syntax: datatype variable = condition ? value1 : value2 
+value1 -> executes or prints when condition is true 
+value2 -> executes or prints when condition is false 
+eg:
+String result = (marks>=60)?"Pass":"Fail";
+syso(result); 
+-----------------------------
+
+conclusion:
+arithmetic -> calculations 
+relation -> comparisons
+logical -> combine conditions 
+Assignment -> store/update values 
+unary -> single operand(value /data) operations 
+bitwise -> binary operations
+ternary -> one-line if-else
+instanceof-> object type checking 
+
+------------------------------------------------------
+INCREMENT & DECREMENT (++ and -- ) 
+
+
+increment -> ++ -> x=x+1
+decrement -> -- -> x=x-1
+
+1.increment 
+-------------------
+pre vs post 
+x=10;
+pre -> change first, then use value (print)
+syntax : ++x -> 11
+post -> first use value , then change 
+syntax: x++ ->10
+syso(x);->11 
+pre
+x=10;
+x=x+1=11
+syso(x);->11
+
+post 
+x=10;
+syso(x);->10
+x=x+1;->x->11
+syso(x)->11;
+
+eg: Think of ATM cash:
+post = show old balance first, the update -> value++
+pre  = update first, then show new balance ; ++value 
+
+post ->
+---------------------
+1. x=8;
+2. y=x++; -> post increment
+3. x? -> 9
+4. y? -> 8
+  
+
+x++ -> post-increment 
+first use the value , then increase by 1 
+step 1-> x -> 8 
+step 2 -> y-> 8 , x->8+1=9
+x->?9
+y-?8
+----------------------------
+x--> post decrement
+first use value, then decrese by 1 ;
+step1: x->8;
+step 2: y=x--;
+ y->8, x=7;
+
+------------------------------------------------------
+pre :
+increment :
+int x =8;
+int y=++x;
+x?
+y?
+
+pre -? first update/modify , then use value 
+step 1 :x->8;
+step 2 :
+x->9
+y->9
+
+x?9
+y?9
+
+int x =5
+int y=--x;
+x?4
+y?4
+
+-----------------------------------------------
+CONDITIONAL STATEMENTS
+-----------------------
+1. taking input 
+2. do calculations
+3. giving output 
+
+is the real life a straight road??
+
+life is full decisions 
+if it rains -> take umbrella 
+if phone battery is low -> charge it 
+
+life runs on conditions. 
+
+so computers also need the power to decide. That's why conditional statements were created.
+
+definition: 
+Conditional statements make the programs think before they act. 
+
+what is a condition?
+A condition is simple a question that gives only the two answers.
+
+eg: for voting??
+is age >=18?
+is eligible for vote
+false -> u cant vote 
+
+computers dont understand may be 
+they can get only true or false 
+
+
+Rule of 3 :
+Every condition has 3 parts:
+1. Condition(question)
+2. Decision(which path?)
+3. Action(what to execute?)
+input age = 10
+
+if(age>=18){
+System.out.println("Eligible");
+}
+else{
+System.out.println("Not Eligible");
+}
+
+not eligible 
+
+TYPES:
+-------------------
+1. if - Single  Decision
+---------------------------------------
+sometimes we want to do something only if a condition is true.
+
+syntax:
+if(condition){
+statemnts;
+}
+
+eg:
+if you have money -> buy snack 
+if signal is green -> go
+
+eg: if (age >=18){
+syso("eligible");
+} 
+
+when to use: one condition. one action, no aternative.
+
+--------------------------------
+2. if - else - Two Choices 
+
+life often gives only two outcomes 
+pass/fail
+eligible/not -eligible
+even /odd 
+
+
+eg: if battery i slow -> charge
+else-> use phone normally 
+
+syntax:
+if(condition is true){
+statements;
+}
+else{
+statements;
+}
+
+eg: if(marks>=50){
+syso("pass");
+}
+else{
+syso("fail");
+}
+when to use : exactly two opposite paths.
+-----------------------------------
+3. else - if -ladder -> multiple choices 
+ mark =60
+if(mark>=90){
+statements; -> A 
+}
+else if (mark>=80){
+statments;
+}
+else if (marks>=70){
+statments;
+}
+else if (marks>=60){
+statments; ->C
+}
+else if (condition is true){
+statments;
+}
+.
+.
+.
+else{
+statements;
+}
+
+when -> when u deal with more than two choices, or with ranges or categories;
+
+-------------------------------------
+website -> user
+
+first -> log in?
+second -> admin ?
+admin -> page || user -> page 
+sometimes one decision depends on another decision.
+
+Nested if -> Decision inside decision
+
+if(loggedIn){
+if(isAdmin){
+syso("Admin page");
+}
+else{
+syso("user page");
+}
+}
+else{
+syso("please login first");
+}
+when -> when one condition must be true before checking another
+
+--------------------------------------------
+Switch statement -> many fixed options  
+ else if becomes messy when options are fixed 
+eg:
+menu system 
+order -> input
+press 1-> tea 
+2-> coffee
+3-> juice 
+when: one variable compared against many fixed values. else if becomes long and hard to read
+this is where switch is better 
+
+synax:
+switch(order){
+     case 1:
+         Syso("tea");
+         break;
+     case 2:
+         Syso("coffee");
+         break;
+     case 3:
+         Syso("juice");
+         break;
+     default:
+         Syso("invalid choice");
+}
+break-> break stops the execution of the switch 
+
+when not to use :
+eg: using mark range to print grades 
+60-90 -> A 
+
+SUMMARY 
+---------------------
+if ->single condition
+if-else ->exact two conditions
+else-if ladder -> more than two conditions 
+nested if -> dependent conditions 
+switch ->many fixed values
+
+-----------------------------------------------------------
+ Control Structures:
+----------------------------
+syso("Hi");
+syso("Hi");
+syso("Hi");
+syso("Hi");
+syso("Hi");
+disadvantages:
+1. boring
+2. code becomes lengthy
+3. more chances of mistakes 
+4. hard to change later
+
+--------------------------
+loops came to solve our problem -> repeatitive task 
+
+In programming also, when some works repeats, we use loops 
+eg:
+    
+multiplication table
+sum of numbers 
+number -> 1 to n 
+Fibonacci series 
+
+what is a Loop?
+Loop-> repeat a block of code until a condition becomes false 
+
+ int mom_praises=10//initial
+ while(mom_praises>=1)->condition(stop-> till when){        
+  syso(student_studies)
+mom_praises-2;-> step/increment-> how to move ?(increment/decrement)  
+}
+
+output:
+1.student_studies
+2.student_studies
+
+
+true -> false 
+false -> true 
+
+TYPES:------->
+
+1. While Loop
+2. do-while Loop
+3. For Loop
+
+Every Loop has 3 parts:
+1. Start->From where?
+2. Stop ->till when?
+3. step-> how to move?(increment/decrement)
+
+if any one is wrong-> either we will get wrong output / infinite loop
+value =1
+while(condition<=2){
+syso("");
+}
+
+--------------------------
+1. While loop
+when to use this :
+you dont know how many times it will repeat
+repetition depends on a condition
+
+Syntax:
+while(condition){
+//statements
+}
+
+while means: as long as condition is true, keeps repeating.
+initial = 1
+stop -> n 
+user -> 1 to 100
+1 to 50 
+1 to 1000
+
+input =1
+while(input<=n)
+input++;
+
+eg: sum of numbers from 1 to n:
+int stop =sc.nextInt();
+int start=0;
+int sum=0;
+while(11<=10){
+sum+=start;
+start++;
+}
+syso(i);
+
+step 1 : sum=0+0=0
+step 2: sum=0+1=1, start=2
+step 3 :sum=1+2=3, start=3
+step 4 : sum=3+3=6, start =4
+step 5: sum =6+4=10 
+-----------------------------
+do-while
+--------------------
+when to use :
+
+code must run at least once 
+condition is checked after the execution
+
+Syntax:
+do{
+//statements
+}while(condition);
+
+eg: print 1 to 5
+int i=1;
+do{
+syso(i);
+i++;
+}while(i<1);
+o/P->1
+
+
+eg:
+do{
+syso("hi");
+i++;
+}while(11<=10);
+
+o/p:
+hi
+
+while                         do while
+if condition is true           eventhough if condition is false, program
+program executes               will execute atleast once 
+
+-------------------------
+for loop:
+------------------
+number of repetitions is known
+counting is involved 
+eg:
+1 to 10;
+multiplication table
+array loops(later)
+
+syntax:
+for(initialization+start;stop;step){
+//code
+}
+
+print 1 to 5:
+for(int i=1;i<=5;i++){
+syso(i);
+}
+step1:1->i->2
+step 2: 2-> i->3
+
+----------------------------------------------------
+STRINGS -> Non-Primitive Data Type
+-------------------------------------
+in java we have int, float, double to store numbers
+ but how do we store names, cities, emails, passwords? 
+
+can we store this in int? double? 
+ this is why String was invented - to store text/words/sentences
+
+definition-> A string is a group of characters stored together to represent the textual data
+
+String name = "Vishnu";
+char letter='v';
+
+Why String is a Class, Not a Datatype?
+ compare, search, join, cut, modify - text is very important 
+
+so they created String as a Class with-> ready-made methods, security, memory optimization 
+
+String s = "java";
+int a = 10;
+how string is stored in memory (very important):
+-----------------------------------------------------
+first memory types:
+1. stack memory
+2. heap memory
+-----------------
+stack memory ->
+it stores variables box->10 -> label-> a
+it is fast
+temporary
+LIFO-> Last In First Out
+
+------------------
+ Heap memory->
+stores objects 
+bigger memory 
+shared 
+
+string name ="ram";
+int a =10;
+
+1. name -> variables -> stack 
+2. "ram" -> data -> stored in Heap
+
+name -> points to -> "ram"
+
+summary :
+variable lives in Stack,
+Actual data lives in Heap.
+
+stack 
+name -> 9xgkdb
+
+heap
+9xgkdb -> "ram"
+
+String Pool -
+---------------------------
+String s ="java";
+ will java store 100'java' words??
+no -> waste of memory 
+
+so, java created String constant pool
+
+each character -> String literal 
+
+A special area inside Heap where only String literals are stored.
+eg:
+String s1 = "computer";
+String s2 = "computer";
+
+1. java checks string pool-> is computer already exists???
+
+computer -> 0hvwhv
+s1 & s2 -> points to the reference where computer object is stored
+
+s1 -> 0hvwhv
+s2 -> 0hvwhv
+
+String s1 = "call";
+String s2 = "call";
+string pool->heap 
+
+JVM checks the String pool -> what do we have/store in this???
+
+string pool:
+call->0xhchd
+java
+box
+bottle
+
+s1-> 0xhchd
+s2 -> 0xhchd
+
+String Pool(inside Heap)
+-------------------------
+-> special area only for String literals
+-> helps vase memory by reusing strings 
+
+String pool(Heap)
+-----------------------
+"call"   <-s1
+         <-s2
+
+both references to the same memory location.
+
+How to create a String
+--------------------------
+Method 1: Using String Literal
+     eg: String s1 = "Java";
+
+Method 2 : Using new Keyword
+     eg: String s2 = new String("Java");
+
+-> stored in Heap memory
+-> creates a new object every time.
+-> less efficient 
+
+Immutable??-> cannot change once created 
+Why Strings are Immutable???
+
+step 1 : String s = "Hello";
+
+Step 2 : String s = "Java";
+Hello + world = Helloworld -> concatenation 
+
+stack                   Heap
+-------                --------
+Step 1: s->0xhsd              Hello->0xhsd
+step 2: s->oxdh                  Java-> oxdh
+
+String Comparison:
+--------------------------------
+
+numbers ? compare 
+int a = 20;
+int b = 20;
+ -> a==b
+
+String:
+--------
+1. == -> Operator 
+2. equals() -> method
+
+1. == Operator
+------------------
+-> this compares memory location
+String a = "java";
+String b = new String("java");
+String c = "java";
+
+
+heap                          stack
+--------                      ---------------
+0798 -> java                   a-> 0798
+0945 -> java                   b-> 0945
+                               c-> 0798
+
+a==b ->false
+b==c ->false
+a==c ->true
+
+==> string compares -> memory location/address
+
+----------------------------
+2. equals() method
+-----------
+this compares content
+-> we dont care in which address/location the object is stored,
+we only cares about whether both the objects are equal or not 
+
+String a = new String("java");
+String b = new String("java");
+ a.equals(b); ->true
+a=java
+b=java
+
+a==b -> false
+
+Note:
+--------
+Use equals() method for String content comparison
+use == operator for String memory location comparison
+
+---------------------------------------
+Important String methods
+---------------------
+1.length()
+String s = "Hello";
+
+usage: syso(s.length()); -> 5
+
+2. charAt(index)
+usage : s.charAt(4); ->o
+
+3. toUpperCase()/toLowerCase()
+usage : s.toUpperCase(); -> HELLO MY NAME IS RESHMA
+
+4. concat() -> conacatenation -> joins two or more strings 
+s.concat("World"); -> HelloWorld
+
+5. contains() 
+ eg: s="Hello World";->length=11 (0 to 10)
+     is 'w' present in String s?
+
+s.contains("world");
+
+6. equalsIgnoreCase()
+----------------------
+String s = "Hello";
+String b = "HELLO";
+
+s.equalsIgnoreCase(b);->true
+
+steps:
+1. either change to upper/lower case 
+2.  both content length same or not we will check 
+3. for loop -> if statement each char check
+
+what's left?
+--------------------
+3 methods -> regularly use
+string builder
+string buffer
+when to use 
+codes 
+
+-------------------------------------------------------
+ 7. substring():
+---------------------
+
+-> start index 
+-> end index
+eg: programming -> prog 
+               0 1 2 3 4 5 6 7 8 9 10
+String name = "p r o g r a m m i n g";
+name.substring(start index, end index);
+eg: name.substring(0,3);
+
+8.replace()
+--------------
+String s = "java";
+s.replace(replacement letter, with what);
+replacement letter -> a
+with what -> o
+s.replace('a','o');->jova
+
+
+9. replaceAll();
+s.replaceAll('a','o');
+o/p-> jovo
+
+10.trim()->cut -> to remove trailing spaces
+what your name?
+    Reshma  
+
+String name = "    Reshma    ";
+name.trim(); -> "Reshma";
+
+-----------------------------------------
+StringBuilder & StringBuffer:
+------------------------------------
+String message = "Hi em Chesthunnav,Tinnava ?" -> THIS IS NOT GONNA CHANGE
+Hi em Chesthunnav, ?-> stored as a new object
+Hi ?-> no change
+Hi what's up?
+
+Hi what's up? -> 0ccwx-> to make the strings mutable -> stringbuilder & stringbuffer
+They are mutable -> they can be changes without creating new objects each time.
+
+1. StringBuilder                                                   2. StringBuffer
+-> A mutable sequence of characters                         -> same as StringBuilder, but 
+used to build/modify the text efficiently                    this is thread-safe(synchronized)
+
+where?
+1. bill generation
+2. report
+3. strings reverse 
+4. o/p message 
+
+String:-> when text does not change much
+StringBuilder -> when you are changing/appending text many times, especially inside loops
+StringBuffer -> when you need thread safety 
+
+one line -> 
+StringBuilder = Fast
+StringBuffer = safe
+String = Simple
+
+Syntax:
+----------
+StringBuilder sb = new StringBuilder();
+StringBuffer sf = new StringBuffer();
+
+Converting back to String:-> converting any kind of data to String kind of data (.toString())
+-------------------
+String result =sb.toString(); 
+int a = 10;
+String new_result = a.toString();
+String a = "10";
+
+mainthing -> when all the alters done, or modifications is done , then we have to convert it back to string and print okayy 
+
+String buds = sb.toString();
+
+---------------------------------------
+Most Important/Frequently Used Methods
+-------------------------
+StringBuilder sb = new StringBuilder("Table");
+
+-----------------------------------------------
+how to write a method -> variable.methodname();??
+------------------------------------------------------
+
+1. append(): -> adds at the end       0 1 2 3 4
+StringBuilder sb = new StringBuilder("T a b l e");
+
+sb.append("Tennis");
+
+2. insert(index,value) -> inserts at particular index given
+index -> 0;
+value -> "Fan";                  0 1 2 3 4 5 6 7
+eg: sb.insert(4,"Fan"); -> o/p = T a b l F a n e
+
+3. delete(start index,end index) -> deletes part of a text
+start -> 0
+end -> 2
+sb.delete(0,2); -> le
+
+4. replace(start,end,value);
+sb.replace(0,2,"Hi"); -> Hile
+
+5. reverse();-
+> reverse the whole text
+eg: sb.reverse();
+
+6.length();
+sb.length();
+
+7. charAt(index);
+sb.charAt(0);
+
+8.setCharAt(index, character);
+-> used to change only one character
+sb.setCharAt(0,'h');
+
+----------------------------------
+Strings -> Immutable -> once created the values cannot be changed 
+
+String a ="st"; -> on modifications, new objects are created -
+> memory inefficient
+
+major drawback
+StringBuilder and StringBuffer
+
+temporary space
+number of modifications -> according to teh propblen 
+it does not create new objects when modifying data 
+
+is strings mutable??
+yes strings are mutable 
+
+
+---------------------------------------
+GENER PROBLEM SOLVING FRAMEWORK
+----------------------------
+STEP-BY-STEP APPROACH (Works for ALL problems)
+------------------------
+
+1. user input
+2. converted it into the mutable string -> stringbuilder
+3. built in methods-> reverse -> applied
+4. mutable string-> converted it back to the constant string
+5. we printed the result 
+
+General Approach 
+-----------------
+Step 1: Understanding the Input & Output
+Step 2: Break the given problem into smaller tasks
+Step 3: Decide data needed 
+            characters? words? counts?
+Step 4: Choose tool
+        buit-in methods? loops? conditional statements??
+Step 5: dry run with small input 
+Step 6: Then write code 
+
+
+Main thing: "We don't start with syntax, We start with thinking."
+
+problems : 1. Reverse each word in a sentence
+           2. Character Frequency in String
+           3. Remove Duplicate Characters
+           4. Anagram Check
+           5. Longest Word in Sentence
+--------------------------------------------------
+ 1. Reverse each word in a sentence
+-------------------------------
+
+public class ReverseEachWord {
+    /*Task: Reverse Ech word in a Sentence
+    input : Java is Powerful
+    output : avaJ si lufrewoP
+    full sentence: lufrewoP si avaJ 
+    word 1 : java->avaJ
+    word 2: is->si
+    word 3: powerful->lufrewoP
+
+    combine and print: word1 + space + word 2 + space + word 3 
+    o/p --> avaJ si lufrewoP
+
+
+    
+    How To Think
+    ------------
+    1. Sentence has multiple words
+    2. Words are separated by space 
+    3. Each words must be reversed individually
+    4. Combine all reversed words
+
+    so tasks become: 
+    1. Separate words
+    2. Reverse each word
+    3. join result
+
+
+    How do we know this Approach?
+Can we reverse full string?? No 
+Do we need word Boundaries ???? Yes 
+How do we get words -> split(" ")
+Split method -> decides on how to break the sentence 
+--------------
+String str = "today*clas*sisbo*ring"," Reshma ","vishnu"
+ str.split(" ");
+today 
+clas
+sisbo
+ring
+
+Approaches : 1. Using StringBuilder 
+             2. For Loop
+Algorithm: 
+-----------
+1. Split sentence into words 
+2. For each word:
+         reverse it 
+3. Append to result -> joining/adding at the end 
+
+Arrays:
+------------
+
+Imagine an egg tray:
+every 2 of eggs one is spoiled 
+0 1 2 3 4 5 6 7 8 9 10 11 -> tray size -?12 
+task-> we have to pick the egg which is good 
+
+//String str = "reshma","muli";
+//int[] a = {10,12,45};
+// An array is a way to store multiple values of the same type in one variable, arranged in order
+    */
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,27 @@
+This Keyword:it refers to the current object
+------------------
+class Student {
+String name;//instance variables
+int age;
+ Student(String name, int age) //parameter variables{
+this.name=name;
+this.age=age;
+}
+}
+ when java sees only name inside the constructor, it gives priority to the nearest variable, which is a local parameter;
+
+note :
+-------------------------
+This always refers to the object that is currently calling the constructor or a method;
+2. when this object is being created, constructor is called by the current object eg: s1 or s2
+ 
+Constructor Chaining:
+---------------------------------
+Constructor chaining means one constructor calls another constructor in the same class.
+and the way we do that is using this(....)
+
+
+
+
+
+

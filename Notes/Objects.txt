@@ -1,0 +1,55 @@
+OBJECT:
+----------------
+Class is a blueprint or a template
+Object is a real -world thing
+The real usable thing is the object
+
+Simple definition:
+--------------------
+An object is an instance of class 
+Eg:
+Car design = class
+Actual car = object
+
+Why Object came:
+--------------------
+How Object is created in java:
+------------------------
+Syntax: ClassName objectName = new Classname();
+eg: Scanner sc = new Scanner(System.in);
+
+class name = Student;
+object = s1;
+Student s1 = new Student();
+
+eg: Car c1 = new Car();
+
+Methods -> behaviours/actions
+Data -> Variables/properties 
+Note:
+------------
+With default values the object will be created for the respective class 
+Can different objects have different values within the same class?
+
+s1-> name,age,pass,grade
+s1-> stack 
+s1.name -> heap 
+s1.age -> heap 
+
+New Keyword :
+------------------------------------
+The new keyword is used to create a new object in memory;
+
+
+
+
+
+
+
+
+
+
+
+
+
+

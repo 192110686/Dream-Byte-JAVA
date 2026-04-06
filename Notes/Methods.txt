@@ -1,0 +1,130 @@
+Methods:
+------------------------------
+In OOP, variables represent what?
+Methods-> behaviour/actions
+
+Definition:
+-----------------------
+A method is a block of code that performs a specific task.
+A method is an action written inside a class 
+A method tells what work an object or a class can do.
+
+study -> action 
+study();
+
+Why methods came:
+---------------------
+greeting(){
+syso("Hi, This is Reshma!");
+}
+
+greeting();
+task ->
+greeting();
+task 
+task
+greeting();
+
+Methods came because we should not write the same code again and again 
+
+why are methods useful??
+--------------------------
+to reduce repetition
+to organize the code 
+to reuse the code 
+to make the program easy
+-----------------------------
+
+Basic Syntax of a method:
+-------------------------------
+returntype methodName(){
+//code
+} 
+
+int sum(){
+return a+b;
+}
+
+7 and 9 
+sum(); -> 16 
+
+eg: void greeting(){
+    //method body
+}
+ ()-> used for passing the parameters(data)
+
+How do we call a method using an object?
+ ans) objname.methodName();
+
+eg: s1.study();
+
+---------------------------------
+Types of Methods by return type:
+-------------------------
+1. Method with no return value:
+-------------------------
+uses void 
+eg: void greeting(){
+ Syso("10+20");
+}
+
+This only performs action, but returns nothing.
+---------------
+2. Method with return value:
+--------------------
+int add(){
+   return 10+20;
+}
+this returns a value 
+
+
+Which keyword is used to return a value from a method?
+ans -> return 
+
+if method returns nothing, which return type is used?
+void
+
+Method with parameters:
+-------------------------
+int add(int a, int b) {
+return a+b;
+}
+
+always methods start with small letter 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
