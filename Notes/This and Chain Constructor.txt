@@ -20,6 +20,38 @@ Constructor Chaining:
 Constructor chaining means one constructor calls another constructor in the same class.
 and the way we do that is using this(....)
 
+Can one constructor call another Constructor??
+
+-> Constructor Chaining means one constructor calling another constructor of the same class
+
+-> Instead of writing repeated initialization code in many constructors, one constructor can call another constructor.
+
+Student(){
+}
+Student(String name){
+this.name=name;
+}
+Student(String name, String school) {
+this.name=name;
+this.school=school;
+}
+Student(String name, String school, int age){
+this.name=name;
+this.school=school;
+this. Age =age;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
