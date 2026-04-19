@@ -1,0 +1,97 @@
+OOP principles helps us:
+-> to protect data
+-> to organize code better
+-> reuse code
+-> reduce complexity
+-> improve flexibility 
+
+OOP Principles:
+-----------------
+-> Encapsulation
+-> Abstraction
+-> polymorphism
+-> Inheritance
+
+ENCAPSULTION:
+-----------------------------
+Which mainly helps in data protection and controlled access.
+
+Encapsulation= data hiding + controlled access
+
+Definition:
+-----------------
+Encapsulation means wrapping data and methods together in one class
+
+-> Encapsulation means binding data(variables) and behaviour(methods) together and controlling access to the data.
+ 
+int marks =-20;
+
+Danger when our data is public:
+-------------------------------------
+when variables are openly accessible:
+ 1. data can become invalid
+ 2. program reliability becomes weak
+ 3. security decreases
+ 4. mistakes increases
+
+so we definitely need to protect our data, that protection is achieved by encapsulation.
+
+Reliability is the ability of a program to :
+-> run without errors
+-> give correct output
+-> work properly for a long time
+
+How encapsulation is achieved in java:
+-----------------------------
+In java, encapsulation is usually achieved by :
+
+1. Making variables private -> data hiding
+2. providing public methods to read or update them
+
+ These methods are called:
+  -> getters -> read operation
+  -> setters -> write/update operation
+Steps for Encapsulation:
+---------------------
+1. private data members(variables)
+2. public getter methods
+3. public setter methods 
+
+What is a getter?
+---------------------
+A getter is a method used to read or get the value of a private variable
+ syntax:
+----------------
+public returnType methodname(){
+ return hidden_variable;
+}
+
+eg:
+public int getMarks(){
+return marks;
+}
+-> it returns the value of the marks
+-> it is used to read the private data
+
+What is a setter?
+-------------------
+A setter is a method used to update or set the value of a private variable.
+Syntax:
+---------
+public returntype methodname(datatype parameter){
+       this.variable=variable;
+}
+
+eg:
+public void setMarks(int marks){
+this.marks=marks;
+}
+
+-> it assigns data to the private variable.
+-> it updates the value of the private varibale
+
+
+
+
+
+

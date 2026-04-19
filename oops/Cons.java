@@ -33,21 +33,21 @@
 
 // }
     
-class Student{
+class Student3{
     String name;
     int age;
     int marks;
 
-    Student() {
+    Student3() {
         this("Unknown",0);
        // this("prajith",12,99);
     }
 
-    public Student(String name, int age) {
+    public Student3(String name, int age) {
         this.name = name;
         this.age = age;
     }
-    public Student(String name, int age,int marks){
+    public Student3(String name, int age,int marks){
        this(name, age);
         this.marks=marks;       
     }
@@ -57,9 +57,9 @@ class Student{
 }
     public class Cons{
         public static void main(String[] args) {
-            Student s1 = new Student();
+            Student3 s1 = new Student3();
              s1.display();
-            Student s2 = new Student("Vikas", 19, 99);
+            Student3 s2 = new Student3("Vikas", 19, 99);
             s2.display();
         }
     }
