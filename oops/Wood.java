@@ -1,0 +1,3 @@
+interface Wood {
+    void start();
+}

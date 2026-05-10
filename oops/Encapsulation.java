@@ -11,7 +11,6 @@ class Employee{
    public int getMarks(){
     return marks;
    }
-
    //declaring setter method
     public void setName(String name){
     this.name=name;

@@ -1,0 +1,139 @@
+Abstraction:
+----------------------
+This principle helps us hide unnecessary internal details and show only the important part.
+Abstraction came to:
+-> hide unnecessary details
+-> show only essential features
+-> reduce complexity 
+
+ABSTRACTION CAME TO REDUCE THE COMPLEXITY. ->key reason
+
+Better definition:
+-------------------
+Abstraction means showing what an object does, not how it does it internally
+
+Abstraction = what to do, not how it is done.
+
+Abstraction is useful because:
+---------------------
+-> it reduces complexity
+-> it improves readability
+-> it makes code easier to use
+-> it hides unnecessary implementation
+-> it allows focus on essential behaviour.
+
+In Java, abstraction is mainly achieved using:
+1. abstract class
+2. abstract method
+
+Later there are also interfaces, but first let us clearly understand abstract class.
+
+Abstract class?
+-----------------------
+An abstract class is a class that cannot be instantiated directly and may
+contain an abstract methods.
+
+Why abstract class came?
+--------------------------
+abstract class Animal{
+  void sound();
+void eat();
+void sleep();
+}
+class Dog extends Animal{
+void sound(){
+syso();
+}
+void eat(){
+
+}
+void sleep(){
+}
+}
+
+-> Sometimes we want parent class to provide common structure, but not full implementation for every method.
+-> Because different child classes may implement that method differently.
+so only abstract class came
+
+-> Abstract class gives common idea, child class gives actual implementation.
+
+09-05-2026
+----------------------
+
+Sometimes parent class only gives GENERAL IDEA
+child classes give ACTUAL IMPLEMENTATION 
+
+parent class only gives idea:
+void start();
+child classes provide actual implementation.
+
+Abstract Method?
+--------------------------
+void start();
+ what is missing here??? -> method body
+
+-> method name is there -> start 
+-> return type is there -> void
+->but implementation is missing -> void start(){//implementation}
+
+Definition?
+-----------------
+An abstract method is a method declared without implementation.
+
+Parent gives idea, child gives implementation.
+
+abstract class Vehicle{
+   abstract void start();
+  void fuelType(){
+    syso("vehkcbdkjcbdkc");
+}
+}
+class Car extends Vehicle{
+    void start(){
+syso("");
+}
+}
+
+common behavior-> normal methods -> those methods can contain the body 
+different behavior->abstract methods 
+
+Interfaces:
+-------------------
+
+suppose we want:
+1. complete abstraction
+2. only method declarations
+3. no implementation logic 
+
+definition:
+----------
+Interface is a blueprint of completely abstract behavior.
+-> interfaces contains only method declarations.
+-> classes implement those methods.
+
+Abstract class = Partial abstraction
+Interface = complete abstraction
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

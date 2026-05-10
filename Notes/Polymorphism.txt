@@ -1,0 +1,147 @@
+Polymorphism:
+-----------------
+can one thing behave in different ways?
+yes
+
+That idea is called polymorphism.
+
+Why it came:
+--------------------
+if we use completely different names for every small variations in the code, it becomes harder to understand
+ so polymorphism came to provide:
+   1. flexibility
+   2. readability
+   3. same interface with different behavior
+meaning:
+---------------
+poly -> many
+morph -> forms
+one thing taking many forms.
+ 
+definition:
+-------------
+Polymorphism means the same method name can perform different takes in different situations.
+-> polymorphism allows one interface or one method name to show different behaviour.
+
+Best line:
+-----------
+polymorphism = same name, different behavior.
+
+Types of Polymorphism:
+-------------------------
+1. Compile-time polymorphism
+2. Run-time polymorphism
+
+in java, these are usually understood as:
+method overloading -> Compile-time polymorphism
+method overriding -> Run-time polymorphism
+
+Compile-time polymorphism:
+------------------------
+compilation=The process of translation
+This happens when the method to call is decided during compilation
+
+Method Overloading:
+------------------
+Method Overloading means having multiple methods with the same name but with the different parameters in the same class
+ -> same name
+ -> parameter list different
+multiply(int a, int b, int c)
+multiply(int a, int b) 
+
+-> Overloading came because many times we want to do the similar work, but input may differ
+eg:
+-> add 2 nums 
+-> add 3 nums 
+-> add decimal nums 
+
+In compile time polymorphism, the decision of which method to call is made at compile time (before running the program)
+ -> Java identifies overloaded methods by parameters, not by return type alone
+
+2. Run-time Polymorphism:
+--------------------------------
+This happens when the decision of which method to call is made at Compile time(during the execution of the program).
+
+In java, this is commonly achieved through:
+Method Overriding:
+--------------------
+Method Overriding means a child class providing its own implementation for a method already present in the parent class.
+
+Same method:
+1. same name and same return type
+2. same parameters
+3. different class relationship
+4. child changes behaviour
+5. different return types possible with covariant return types 
+-> when the methods has the parent return type then when those child ovrrides those method can use the different return return types as its child ones 
+
+best line:
+-------
+same method in parent and child, but child changes that behaviour = overriding
+
+
+Summary:
+----------
+overloading-> same class, different parameters
+overriding-> different classes, same parameters
+/*Method Overriding:
+-----------------------
+1. same parameters
+2. different class name
+3. same method name
+4. mainly inheritance is needed  
+
+Method Overloading
+-------------------------
+1. same class name
+2. different parameters
+3. same method names
+4. different class names possible  */
+
+method overloading & method overriding combined example:
+--------------------------------------------
+class Payment{
+    void pay(){
+        System.out.println("Payment is processing");
+    }
+    void withdraw(){
+        System.out.println("Withdraw is done");
+    }
+}
+class UPI extends Payment{
+    @Override
+    void pay(){
+        System.out.println("Payment through UPI");
+    }
+    void withdraw(int x){
+         System.out.println("Withdraw of 500 done.");
+    }
+}
+class Card extends UPI{
+
+    void withdraw(int x,int y){
+        System.out.println("WIthdraw of 1000 and 500 done");
+    }
+}
+public class methodoverriding {
+    public static void main(String[] args){
+        UPI u1= new UPI();
+        Card c1 = new Card();
+        u1.pay();
+        c1.pay();
+        Payment p1 = new Payment();
+        p1.pay();
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

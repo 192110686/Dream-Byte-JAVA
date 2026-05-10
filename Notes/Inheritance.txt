@@ -1,2 +1,221 @@
 Inheritance:
 ------------------
+This principle mainly helps us in 
+1. code reuse
+2. reducing repetition
+3. building relationships between the classes
+
+why inheritance came:
+-----------------------
+in many programs, different classes have some common features.
+eg:
+1. dog,cat,cow all are animals
+2. car, bike, bus all are vehicles
+
+if we write the same common code separately in every class, code becomes repeated.
+
+This is called code duplication.
+
+so inheritance came to solve this problem.
+
+-> Inheritance came to avoid code duplication and support the code reuse. 
+
+Definition of inheritance:
+------------------------------
+Inheritance means one class acquiring the properties and methods of another class
+-> inheritance means code reuse through parent-child relationship between classes.
+
+-> memory trick= reuse + parent-child relationship
+
+basic terminology:
+-----------------
+In inheritance there are two important classes:
+1. parent class:
+----------------
+Also called as: super class, base class
+-> parent class contains the common features.
+-> child class takes those features and can also add its own special features.
+
+eg: class Animal{
+ void eat(){
+syso("Animal is eating");
+}
+void sleep(){
+syso("Animal is sleeping");
+}
+}
+class Dog extends Animal {
+void bark(){
+syso("Dog is barking");
+}
+}
+
+2. Child class:
+-------------------
+Also called : subclass , derived class
+
+Which keyword is used for inheritance in java?
+ans : extends 
+
+Note:
+------
+1. Parent class cannot directly access the child's properties or methods
+2. Inheritance works only one way: child classes inherit the parent's fields and methods, but the parent does not automatically know about the child's additions.
+3. This is because the parent class is defines before the child, and it should not depend on child-specific details.
+4. Parent class contains the common features
+5. child class contains special featured.
+
+What gets inherited?
+------------------
+from parent class, child class can inherit:
+1. variables(depending on access)
+2. methods(depending on access)
+ but not everything is inherited the same way in all the cases
+
+What does not get inherited fully:
+-------------------------
+Constructors are not inherited like normal methods
+-> parent constructors helps in object creation, but it is not directly inherited as a normal member
+
+Types of Inheritance of Java:
+-----------------------------------
+types-> when we say types of inheritance, we are talking about the different ways classes are connected.
+eg:
+one parent -> one child
+one parent -> child->grand child
+one parent -> many children
+These different shapes are called as types of inhereritance.
+
+Types:
+----------
+1. Single Inheritance (supported)
+2. Multilevel Inheritance (supported)
+3. Hierarchical Inheritance (supported)
+4. Multiple Inheritance
+5. Hybrid Inheritance
+-> Multiple and Hybrid are not supported with classes directly.
+
+Single Inheritance:
+-------------------------
+definition:
+--------
+when one child inherits from one parent class, it is called single inheritance.
+ structure:
+-------------
+A->B
+A = parent
+B = child
+ example:
+--------------
+class Animal{
+    void eat(){
+        System.out.println("Animal is eating");
+    }
+}
+class Dog extends Animal {
+ void bark(){
+    System.out.println("Dog is barking");
+ }
+}
+public class SingleInheritance{
+    public static void main(String[] args){
+        Dog d1 = new Dog();
+        d1.eat();
+        d1.bark();
+    }
+}
+
+
+2. Multilevel Inheritance:
+--------------------------
+When one class inherits from another class, and then another class inherits from it, it is called multilevel inheritance.
+Structure:
+-----------
+A -> B -> C
+A is parent of B
+B is parent of C
+C indirectly gets features from A also
+eg: Animal->Dog->Puppy
+This is multilevel because inheritance happens in levels.
+
+example:
+---------
+class Cow{
+    void eat(){
+        System.out.println("Cow is eating");
+    }
+}
+class Milk extends Cow{
+    void boil(){
+        System.out.println("Milk is coming from Cow");
+    }
+}
+class ButterMilk extends Milk  {
+   void churn(){
+    System.out.println("We get Butter from ButterMilk");
+   }
+}
+class Butter extends ButterMilk{
+    void move(){
+        System.out.println("We get Butter from ButterMilk");
+    }
+}
+public class MultilevelInheritance {
+    public static void main(String[] args) {
+        ButterMilk b1 = new ButterMilk();
+        b1.boil();
+        b1.eat();
+        b1.churn();
+        Butter but1 = new Butter();
+        but1.boil();
+        but1.churn();
+        but1.eat();
+        but1.move();
+    }
+}
+
+3. Hierarchical Inheritance:
+-----------------------
+When multiple child classes inherit from the same parent class, It is called hierarchical inheritance.
+ Structure:
+------------
+     A
+    | |
+    B C
+one parent -> Many children
+eg: Animal -> Dog and Cat
+This is hierarchical because many child classes come under one parent.
+
+Multiple Inheritance:
+------------------------
+when one child class inherits from more than one parent class, it is called multiple inheritance.
+Structure:
+--------- 
+    B  C
+    \  /
+     A
+one child, multiple parents.
+If two parent classes have same method name, confusion comes about which one child should use.
+
+Java does not support multiple inheritance with classes because it can create  ambiguity.
+
+Hybrid Inheritance:
+-----------------------
+Hybrid Inheritance is a combination of two or more types of inheritance.
+eg:
+hierarchical + multilevel together
+
+Structure:
+-------------------
+     A
+    / \
+    B  c
+   /
+  D
+In java, hybrid inheritance is also not supported directly with classes because it includes multiple inheritance situations.
+ 
+
+
+
+
+
