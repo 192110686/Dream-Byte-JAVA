@@ -1,0 +1,212 @@
+EXCEPTIONAL HANDLING:
+--------------------------
+Exceptional Handling came to handle runtime problems safely. 
+
+What is an exception:
+--------------------
+An exception is an unwanted event that occur during program execution and disrupts the normal flow of the program
+
+An exception is a runtime problem that interrupts the normal execution.
+
+Exception Handling:
+-------------------------
+Exceptional handing is the process of handing runtime errors so that the program does not terminate abnormally
+
+Exception Hierarchy basics:
+-------------------------
+In java, exceptions are objects.
+There is a class hierarchy
+
+simple structure:
+---------------
+Throwable
+   Error
+   Exception
+
+Types of Exceptions:
+------------------------
+1. Checked Exception
+2. Unchecked Exception
+
+Checked Exception:
+---------------------------
+Checked exceptions are exceptions checked by the compiler at compile time.
+That means java forces us to handle them.
+eg:
+IOException -> Input / Output Exception
+FileNotFoundException
+SQLException -> later 
+
+Unchecked Exception:
+------------------------------
+Unchecked exceptions are exceptions not checked by the compiler at compile time.
+They usually happens because of the programming mistakes.
+
+eg:
+-> ArithmeticException
+-> NullPointerException
+->ArrayIndexOutOfBoundsException
+->NumberFormatException
+
+Checked = compiler says handle it.
+Unchecked = runtime says you made a mistake
+
+Main Keywords in Exception Handling:
+----------------------------------
+->try
+->catch
+->finally
+->throw
+->throws
+
+try block:
+----------------------
+The try block contains the risky code that may produce an exception.
+
+eg:
+try{
+int result = 10/0;
+}
+->The code that may fail goes inside try.
+
+
+catch block:
+-----------------
+The catch block handles the exception if it occurs in the try block.
+
+eg:
+catch(ClassNotFoundException e ){
+Syso("Cannot divide by zero");
+}
+
+finally block:
+---------------------
+The finally block will always executes whether exception occurs or not.
+Used for:
+--------
+-> cleanup code
+-> closing file
+-> closing DB connection
+-> final message
+
+Flow of Exception:
+---------------------------
+Case 1 : No exception
+------------------
+->try runs fully
+->catch is skipped
+-> finally runs
+
+Case 2 : Exceptions occurs and matched catch:
+----------------------------
+->try runs till exception line
+->remaining try lines are skipped
+->matching catch runs
+->finally runs
+
+Case 3 : Exceptions occurs but no matching catch
+---------------------------------------
+->program may terminate after finally
+->finally still runs 
+
+Note:
+-----------------
+-> If there's an exception at the first line of the try block 
+after that, the try block stops.
+Second risky line is never reached.
+
+->When one try block can produce different exceptions, we can use multiple catch blocks. But, only one matching catch executes.
+
+Generic Exception catch:
+--------------------------
+you can also catch a general exception:
+
+catch(Exception e) {
+Syso("Some exception occurred");
+}
+
+This catches many exceptions because Exception is parent class
+
+Important rule for catch order:
+----------------------------
+Specific exceptions should come first
+General exceptions should come later.
+wrong:
+--------
+catch(Exception e){
+syso("some error occurred");
+}
+catch(ArithmeticException e){
+syso("cannot divide by zero");
+}
+This is wrong because general one will already catch it
+
+Correct:
+---------------
+catch(ArithmeticException e){
+syso("cannot divide by zero");
+}
+catch(Exception e){
+}
+
+Nested Try Block:
+-------------------------
+Yes, try block inside another try block is possible.
+public class NestedTryBlock {
+    public static void main(String[] args) {
+        try {
+            try {
+                int result=10/0;
+            } catch (ArithmeticException e) {
+                System.out.println("Inner Catch handled arithmetic exception");
+            }
+            int[] arr = {1,2,3};
+            System.out.println(arr[5]);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Outer catch handled array exception");
+        }
+    }
+}
+
+throw keyword:
+------------------
+throw is used to explicitly create and throw an exception manually.
+This is different from automatic exception occurrence.
+
+Why throw is used:
+----------------------
+throw is used when we want to create our own validation rule and manually signal an exception.
+
+eg:
+---
+->negative age
+->invalid salary
+->wrong password
+->insufficient balance
+
+throws keyword:
+--------------------------
+throws is used in method declaration to indicate that the method may produce an exception.
+-> throws does not handle exception
+->it only passes that responsibility to caller.
+
+throw vs throws:
+-------------------------
+throw = actually throws the exception
+throws = declares possibility of exception
+
+throw:
+----------
+->used inside method body
+->used to throw one exception object -> we will be using new keyword
+->followed by new ExceptionType(...message...);
+
+throws:
+--------------
+-> used in method signature
+-> declares exception may occur
+-> can list multiple exception types.
+
+
+
+
