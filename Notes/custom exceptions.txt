@@ -1,0 +1,91 @@
+checked exceptions
+unchecked exceptions
+Checked exceptions came so java can force handling of predictable external problems 
+
+Custom Exceptions:
+------------------------
+Why it came:
+--------------
+custom exceptions are used when the built-in exceptions are not enough for our business logic.
+
+Custom exceptions came to represent application-specific or business-specific errors.
+
+examples:
+--------------
+1. voting eligibility:
+InvalidAgeException
+
+2. Bank
+InsufficientBalanceException
+
+3. Student System
+InvalidMarksException
+
+What is Custom Exception:
+-------------------------
+A custom exception is a user-defined exception created by the programmer.
+
+-> A custom exception is our own exception class created to represent specific application errors.
+
+Memory Line:
+----------------
+Built-In exceptions are general
+Custom-exceptions are project specific
+
+How to create a Custom Exception:
+------------------------------
+To create a custom exception, we have to create our own class
+
+Usually:
+-----------
+->If we want checked custom exception, we extend Exception
+->If we want unchecked custom exception, we extend RuntimeExcepiton
+
+Syntax:
+------------
+class MyException extends Exception {
+MyException(String message) {
+super(message);
+}
+}
+
+Explanation:
+----------------
+1. class MyException -> our own exception class
+2. extends Exception ->makes it a checked exception type
+3. constructor takes message
+4. super(message) sends message to the parent exception class
+
+
+why extends Exception?
+-----------------------
+when we extend Exception, our class becomes an exception type
+That means java will treat it like a real exception
+This is how our class becomes throwable.
+
+Why super(message):
+--------------------
+The parent Exception class already knows how to store and manage an exception message.
+we are passing our message to the parent exception class
+
+
+example:
+-------------------
+InvalidAgeException:
+----------------------
+class InvalidAgeException extends RuntimeException{
+InvalidAgeException(String message){
+super(message);
+}
+}
+
+Common Methods used with Custom Exception Object:
+----------------------------------------------------
+same as normal exceptions:
+1.getMessage();
+2.toString();
+3.printStackTrace(); 
+
+
+ 
+ 

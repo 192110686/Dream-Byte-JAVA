@@ -1,0 +1,28 @@
+Super Keyword:
+------------------
+super is a reference variable that refers to the parent class object
+It is used when a child class wants to access something from its parent class
+
+Why do we need super?
+-------------------------
+class Animal{
+String color = "White";
+}
+Class Dog extends Animal{
+String color = "Black";
+}
+
+
+
+-------------------------------------
+Method Overloading:
+-----------------
+have same name and different parameters 
+eg:
+add 2 nums -> void add(int a , int b)
+add 3 nums -> void add(int a, int b, int c)
+
+Method Overriding:
+------------------------
+when a child class provides its own implementation of a parent clas method, 
+

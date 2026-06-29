@@ -1,0 +1,144 @@
+Wrapper Classes:
+------------------
+Till now we used primitive data types like:
+->int -> Integer 
+->double
+int a = 3;
+Integer a = 3; value wrapped inside an object.
+
+Can primitive values work everywhere in java?
+ans -> No
+
+is int an object?
+Can collections like ArrayList store objects or primitives directly?
+
+Today we will learn 2 things in order:
+1. Wrapper Classes
+2. Autoboxing
+3. Unboxing
+
+Wrapper Classes:
+------------------
+A wrapper class is a class that wraps a primitive data type into an object.
+-> Wrapper class means object form of a primitive data type.
+
+Best memory Line:
+---------------------
+Primitive = raw Value
+Wrapper class = object form of that value
+
+Primitive types and Wrapper classes:
+--------------------------------------------
+Primitive Type                 Wrapper Class
+-----------------              -----------------
+byte                                 Byte
+short                                Short
+int                                  Integer
+long                                 Long
+float                                Float
+double                               Double
+char                                 Character
+boolean                              Boolean
+
+Why primitive types are not enough?
+---------------------------------
+-> they are not objects
+->they cannot be used directly in collections
+-> they cannot store null
+-> java API's often expects objects
+ so wrapper classes solve this problem
+
+Primitive vs wrapper
+--------------------------
+Primitive:
+--------------
+->stores value directly
+->not an object
+->faster
+-> less memory
+-> cannot store null
+Wrapper:
+-------------
+-> object representation
+->stores value inside object 
+->can use methods  
+-> can store null 
+-> can be used where object is required.
+
+Ways to create Wrapper Objects:
+------------------------------
+old style:
+-----------
+Integer num = new Integer(10);
+
+it is not preferred the above way in these days
+
+Better way:
+---------------
+Integer num = Integer.valueOf(10);
+
+Simple way:
+--------------
+Integer num = 10;
+
+valueOf() method:
+------------------------
+valueOf() converts primitive or string into wrapper Objects
+
+public class ValueOfMethod {
+    public static void main(String[] args) {
+        Integer a = Integer.valueOf(10);
+        Double b = Double.valueOf("25.5");
+    }
+}
+
+parseInt() and parseDouble():
+-----------------------------
+These methods convert string into primitive values
+
+public class ParseIntDouble {
+    public static void main(String[] args) {
+        int a = Integer.parseInt("100");
+        double b = Double.parseDouble("45.8");
+        System.out.println(a+10);
+        System.out.println(b+5);
+    }
+}
+
+Wrapper classes and null:
+---------------------------
+Primitive types cannot store null
+Wrapper classes can store null , because those wrapper classes are object reference, so it can be null.
+
+Wrapper Classes in collections:
+------------------------------
+
+import java.util.ArrayList;
+
+public class Collections {
+    public static void main(String[] args) {
+        ArrayList<Double> arr = new ArrayList<>();
+    }
+}
+
+Integer is used because collections store objects
+
+Wrapper Utility methods:
+-------------------------
+toString():
+-------------
+used to convert the wrapper objects to string 
+public class ToString {
+    public static void main(String[] args) {
+        Integer num = 50;
+        String str = num.toString();
+        System.out.println(str);
+    }
+}
+
+compareTo():
+---------------
+
+
+
+
