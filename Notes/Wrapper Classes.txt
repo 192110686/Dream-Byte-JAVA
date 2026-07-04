@@ -138,7 +138,103 @@ public class ToString {
 
 compareTo():
 ---------------
+This method used to compare the objects and give output according to that.
+if 1st num > 2nd num -> it gives positive value (1)
+if 1st num <2nd num -> it gives negative value. (-1)
+if num1 = num2 -> it gives 0
+
+eg:
+-----
+Integer a = 10;
+Integer b = 20;
+
+Scenario 1:
+-----------
+a.compareTo(b) -> -ve value
+
+Scenario 2:
+------------
+b.compareTo(a) -> +ve value
+
+Scenario 3:
+----------
+b.compareTo(20) -> 0
 
 
+public class CompareTo {
+    public static void main(String[] args) {
+        Integer a=100;
+        Integer b = 50;
+        System.out.println(a.compareTo(b));
+        System.out.println(b.compareTo(a));
+        System.out.println(a.compareTo(100));   
+    }
+}
+
+MAX_VALUE and MIN_VALUE:
+---------------------------
+Wrapper classes also provide useful constants.
+To know the min value and the max value of the digit related wrapper classes we can use the above wrapper constants.
+MIN_VALUE -> helps us to find the minimum value of the wrapper class
+MAX_VALUE -> helps us to find the maximum value of the wrapper class
+
+Character Wrapper example:
+--------------------------------
+isDigit(); -> to check whether the character is digit or not
+isLetter(); -> to check whether the character is letter or not
+public class CharacterWrapper {
+   public static void main(String[] args){
+    Character ch = Character.valueOf('7');
+    System.out.println(ch);
+    System.out.println(Character.isDigit(ch));
+    System.out.println(Character.isLetter(ch));
+   } 
+}
+
+Autoboxing:
+------------------
+int a = 10;
+
+Integer a = Integer.valueOf(10);
+What is a boxing?
+-------------------------
+If we convert primitive value into wrapper object manually,. that IS CALLED BOXING.
+
+But writing valueOf() again and again is lengthy.
+So java automatically does this conversion for us.
+That automatic conversion is called "AUTOBOXING".
 
 
+Definition:
+--------------
+Autoboxing is the automatic conversion of primitive data type into it's corresponding wrapper object.
+
+public class Autoboxing {
+    public static void main(String[] args){
+         int a = 10;
+       Integer b = a;  //autoboxing
+        System.out.println(a);
+        System.out.println(b);
+    }
+}
+              converts to
+primitive --------------------> Wrapper Object
+
+UnBoxing:
+--------------
+Unboxing is the conversion of wrapper object into its corresponding primitive data type.
+
+what is auto-unboxing:
+-----------------------------
+When java does this conversion automatically, it is called auto-unboxing.
+                 Auto-unboxing conversion
+Wrapper Object -----------------------------> Primitive value.
+
+public class AutoUnBoxing {
+    public static void main(String[] args){
+        Integer obj = 20;
+        int a = obj;
+        System.out.println(obj);
+        System.out.println(a);
+    }
+}
