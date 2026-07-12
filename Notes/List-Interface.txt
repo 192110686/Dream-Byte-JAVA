@@ -1,0 +1,385 @@
+List:
+------------ 
+List is an interface in java that stores elements in an ordered way and allows duplicate values.
+
+List = ordered + duplicates allowed + index-based
+eg:
+-----
+playlist
+to-do list
+shopping cart
+
+Main features of List:
+------------------
+Feature 1: Insertion order is maintained.
+A
+B
+C
+o/p -> [A, B, C]
+This is called maintaining insertion order.
+
+Feature 2: Duplicates are allowed
+eg:
+---
+[10, 20, 10, 30]
+
+Feature 3: Index-Based access is possible.
+Each element has a position number called index.
+1st -> 0
+2nd -> 1
+So we can access elements by index.
+
+Feature 4: Dynamic Size
+List can grow or shrink dynamically.
+This is unlike arrays, which are fixed size.
+
+Feature 5: Stores Objects
+List stores Objects, not primitive types directly.
+
+Is List a class or Interface?
+--------------------
+List is an interface, not a class.
+That means List gives rules, but actual objects are created using implementing classes.
+
+->ArrayList
+->LinkedList
+->Vector
+Basic List Syntax:
+-----------------------
+
+import java.util.LinkedList;
+import java.util.List;
+
+public class ListSyntax {
+    public static void main(String[] args){
+        List<Integer> list = new LinkedList<>();
+    }
+}
+
+Main Methods in List:
+------------------------
+1. add()
+----------
+Used to add an element into the list.
+eg:
+--------
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ListSyntax {
+    public static void main(String[] args){
+       List<String> names = new ArrayList<>();
+       names.add("Sri");
+       names.add("Vishnu");
+       names.add("Naveen");
+       System.out.print(names);
+    }
+}
+
+2.add(index, element);
+---------------
+Used to insert element at a specific position.
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ListSyntax {
+    public static void main(String[] args){
+       List<String> names = new ArrayList<>();
+       names.add("Sri");
+       names.add("Vishnu");
+       names.add("Naveen");
+       names.add(2,"Gopal");
+       names.add(0,"Anu");
+       System.out.print(names);
+    }
+}
+
+3. get(index):
+-----------------
+Used to get element at a specific index.
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ListSyntax {
+    public static void main(String[] args){
+       List<String> names = new ArrayList<>();
+       names.add("Sri");
+       names.add("Vishnu");
+       names.add("Naveen");
+       names.add(2,"Gopal");
+       names.add(0,"Anu");
+       System.out.print(names);
+       System.out.println(names.get(2));
+        System.out.println(names.get(4));
+    }
+}
+
+4. set(index, element):
+--------------------
+Used to upate/replace element at a given index.
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ListSyntax {
+    public static void main(String[] args){
+       List<String> names = new ArrayList<>();
+       names.add("Sri");
+       names.add("Vishnu");
+       names.add("Naveen");
+       names.add(2,"Gopal");
+       names.add(0,"Anu");
+       System.out.print(names);
+       System.out.println(names.get(2));
+        System.out.println(names.get(4));
+           names.set(0,"Harshini");
+                System.out.print(names);
+
+    }
+}
+
+5. remove(index)
+------------------
+This method helps us to remove element at given index.
+
+eg:
+-----
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ListSyntax {
+    public static void main(String[] args){
+       List<String> names = new ArrayList<>();
+       names.add("Sri");
+       names.add("Vishnu");
+       names.add("Naveen");
+       names.add(2,"Gopal");
+       names.add(0,"Anu");
+       System.out.print(names);
+       System.out.println(names.get(2));
+        System.out.println(names.get(4));
+           names.set(0,"Harshini");
+           names.remove(3);
+                System.out.print(names);
+
+    }
+}
+
+6. remove(Object o):
+------------------
+Removes a specific object/value from the list.
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ListSyntax {
+    public static void main(String[] args){
+       List<String> names = new ArrayList<>();
+       names.add("Sri");
+       names.add("Vishnu");
+       names.add("Naveen");
+       names.add(2,"Gopal");
+       names.add(0,"Anu");
+       System.out.print(names);
+       System.out.println(names.get(2));
+        System.out.println(names.get(4));
+           names.set(0,"Harshini");
+           names.remove("Gopal");
+                System.out.print(names);
+
+    }
+}
+
+7. size();
+----------------
+Returns the number of elements in the list.
+eg:
+----
+import java.util.ArrayList;
+import java.util.List;
+
+public class ListSyntax {
+    public static void main(String[] args){
+       List<String> names = new ArrayList<>();
+       names.add("Sri");
+       names.add("Vishnu");
+       names.add("Naveen");
+       names.add(2,"Gopal");
+       names.add(0,"Anu");
+       System.out.print(names);
+           names.set(0,"Harshini");
+           System.out.println(names.size());
+                System.out.print(names);
+    }
+}
+
+8. contains()
+----------------
+Checks whether a value exists in the list.
+The output will be a Boolean value -> either true or false.
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ListSyntax {
+    public static void main(String[] args){
+       List<String> names = new ArrayList<>();
+       names.add("Sri");
+       names.add("Vishnu");
+       names.add("Naveen");
+       names.add(2,"Gopal");
+       names.add(0,"Anu");
+       System.out.print(names);
+           names.set(0,"Harshini");
+           System.out.println(names.size());
+                System.out.print(names.contains("Hari"));
+                System.out.println(names.contains("Sri"));
+    }
+}
+
+9. isEmpty()
+----------------
+Checks whether the list is empty or not.
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ListSyntax {
+    public static void main(String[] args){
+       List<String> names = new ArrayList<>();
+       names.add("Sri");
+       names.add("Vishnu");
+       names.add("Naveen");
+       names.add(2,"Gopal");
+       names.add(0,"Anu");
+       System.out.print(names);
+           names.set(0,"Harshini");
+           System.out.println(names.size());
+                System.out.print(names.contains("Hari"));
+                System.out.println(names.contains("Sri"));
+                System.out.println(names.isEmpty());
+    }
+}
+
+empty list -> true
+if the list contains the elements -> false
+
+10. clear()
+----------------
+Removes all the elements from the list.
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ListSyntax {
+    public static void main(String[] args){
+       List<String> names = new ArrayList<>();
+       names.add("Sri");
+       names.add("Vishnu");
+       names.add("Naveen");
+       names.add(2,"Gopal");
+       names.add(0,"Anu");
+       System.out.print(names);
+           names.set(0,"Harshini");
+           System.out.println(names.size());
+                System.out.print(names.contains("Hari"));
+                System.out.println(names.contains("Sri"));
+                System.out.println(names.isEmpty());
+                names.clear();
+                System.out.println(names);
+                System.out.println(names.size());
+    }
+}
+
+11. indexOf():
+----------------
+Returns the first of the given element.
+12 70 50 10 50 70 
+
+50 -> index ->2
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ListSyntax {
+    public static void main(String[] args){
+  List<Integer> list = new ArrayList<>();
+  list.add(1);
+  list.add(3);
+  list.add(1);
+  list.add(4);
+  list.add(1);
+  System.out.println(list.indexOf(1));
+    }
+}
+
+12. lastIndexOf():
+---------------------
+Returns the last occurrence index of an element.
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ListSyntax {
+    public static void main(String[] args){
+  List<Integer> list = new ArrayList<>();
+  list.add(1);
+  list.add(3);
+  list.add(1);
+  list.add(4);
+  list.add(1);
+  System.out.println(list.lastIndexOf(1));
+    }
+}
+
+12. Traversing a List:
+--------------------------
+we have 2 options to traverse a list
+1. using a normal for loop
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ListSyntax {
+    public static void main(String[] args){
+  List<Integer> list = new ArrayList<>();
+  list.add(1);
+  list.add(3);
+  list.add(1);
+  list.add(4);
+  list.add(1);
+  System.out.println(list.lastIndexOf(1));
+  for(int i=0;i<list.size();i++){
+    System.out.print(list.get(i));
+  }
+    }
+}
+
+2. using enhanced for loop
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ListSyntax {
+    public static void main(String[] args){
+  List<Integer> list = new ArrayList<>();
+  list.add(1);
+  list.add(3);
+  list.add(1);
+  list.add(4);
+  list.add(1);
+  System.out.println(list.lastIndexOf(1));
+for(Integer li:list){
+    System.out.println(li);
+}
+    }
+}
+
+
+
+

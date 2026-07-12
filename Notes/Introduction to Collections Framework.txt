@@ -1,0 +1,210 @@
+Introduction to Collections Framework :
+----------------------------------------
+int[] marks={90,80,70};
+but arrays have some limitations.
+
+Limitations of Arrays:
+-----------------------
+1. fixed size 
+int[] arr = new int[3];
+
+2. Insertion and deletion are difficult
+If array has: 10 20 30 40
+between 20 and 30 -> 25 insert
+10 20 30 40
+20 30 40 10
+30 40 10 20
+
+3. Arrays can store primitives, but collections mainly work with objects.
+eg:
+array can be int[], char[];
+but collections uses Integer, Character.
+
+4. Arrays have limited built-in methods
+collections provide many ready-made methods like:
+add
+remove
+contains
+size
+clear
+
+5. Not very convenient for real-world dynamic data.
+In real applications, data size keeps changing:
+such dynamic data is not comfortable with arrays.
+
+COLLECTIONS CAME TO OVERCOME THE LIMITATIONS OF ARRAYS.
+That is why fixed-size array is not enough.
+we need a flexible storage system.
+that is COLLECTIONS.
+
+What is Collection?
+-----------------------
+A collection is an object that can store a group pf other objects.
+
+->A collection is a framework structure used to store and manage multiple objects dynamically.
+lodge -> 100 rooms
+5 -> morning
+10 -> after one hour
+50 -> evening
+
+array = fixed size
+collection = dynamic size
+
+What is Collection Framework
+-----------------------------
+definition:
+---------------
+Collection Framework is a set of interfaces and classes in java that provide ready-made architecture for storing and processing groups of objects.
+
+->Collection Framework is Java's ready-made system for handling multiple objects.
+
+Why is it called a framework?
+------------------------------
+Framework = ready-made structure with rules and reusable code.
+
+What does Collection Framework provide?
+--------------------------------------
+It provides:
+->dynamic storage
+->easy insertion
+->easy deletion
+->searching support
+->sorting support
+->predefined methods
+->different data structures for different needs
+
+Main Parts of Collections Framework?
+--------------------------------
+The java collection framework mainly consists of:
+1. Interfaces
+2. Classes
+3. Algorithms/utility methods.
+
+Interfaces in Collection Framework:
+------------------------------------
+Interfaces gives the blueprint or rules.
+Main Interfaces are:
+1. List
+2. Set
+3. Queue
+4. Map
+
+Classes in Collection Framework
+--------------------------------
+Classes are actual implementation of those interfaces.
+eg:
+---
+->ArrayList
+->LinkedList
+->HashSet
+->LinkedHashSet
+->TreeSet
+->PriorityQueue
+->HashMap
+->LinkedHashMap
+->TreeMap
+
+Utility Methods/Algorithms:
+--------------------------
+Java also gives utility methods for operations like:
+->sorting
+->searching
+->reversing
+->finding min/max
+
+Collection Interface
+-------------------
+list      set      queue
+
+Map Interface -> map is separate.
+
+Collection -> An interface in Java
+Collections -> A utility class in java
+Collection Framework -> The complete system of interfaces + classes + algorithms
+
+
+Main Interfaces Overview:
+-----------------------------
+1. List:
+--------
+List is used when:
+-order matters
+-duplicates are allowed.
+
+eg:
+----
+Student attendance list
+->playlist songs
+->shopping cart items
+
+Common classes:
+--------------
+ArrayList
+LinkedList
+Vector
+
+Key Features:
+-------------
+->maintains insertion order
+->allows duplicate elements
+->index-based access possible.
+
+2. Set:
+---------
+Set is used when:
+duplicate values are not allowed.
+eg:
+---
+unique usernames
+unique email Id's
+unique roll numbers
+
+Common Classes:
+-------------------
+HashSet
+TreeSet
+LinkedHashSet
+
+Key feature of Set:
+----------------------
+1. no duplicates
+2. order depends on implementation.
+
+3. Queue:
+--------------------
+Queue is use when data should be processed in sequence, often FIFO (first in first out).
+
+eg:
+---------
+ticket line
+printer queue
+call queue
+
+common classes:
+----------------
+1. PriorityQueue
+2. LinkedList can also act as Queue
+
+4. Map
+----------
+Map is used to store data in keyt-value pair.
+
+eg:
+-----
+studentId -> studentName
+productid -> price
+username -> password
+
+common classes:
+------------------
+1. HashMap
+2. LinkedHashMap
+3. TreeMap
+
+Map is not part of Collection interface, but it is part of the Collection Framework.
+
+
+
+
+
+
