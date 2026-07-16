@@ -1,0 +1,339 @@
+ArrayList:
+------------------
+ArrayList is a class that implements the List interface and stores elements internally using a resizable array.
+
+1. ArrayList is a class:
+------------------------
+Therefore, we can create it's object.
+ArrayList<String> names = new ArrayList<>();
+
+2. It Implements List:
+-----------------------
+Therefore, it supports list operations.
+
+List<String> names = new ArrayList<>();
+
+3. It uses a resizable array internally:
+-------------------------------
+It's internal storage behaves like an array, but java manages resizing automatically.
+
+
+ArrayList is an array managed dynamically by java.
+
+Normal Array vs Internal ArrayList array:
+--------------------------------------------
+Normal Array:
+--------------
+int[] values = new int[4];
+Index     0  1  2  3
+          10 20 30 40
+ArrayList:
+---------------
+ArrayList<Integer>
+Index    0  1  2  3  4
+         10 20 30 40 50
+
+we do not write this resizing logic 
+-> ArrayList manages it internally.
+
+Important correction about dynamic:
+-------------------------------
+Dynamic does not mean unlimited.
+It means the size can change while the program is running.
+The arrayList can continue growing only while memory is available.
+
+Size vs Capacity:
+-------------------
+Size:
+------------
+The number of actual elements currently stored.
+
+Capacity:
+--------------
+The number of elements the internal array can currently hold before it needs resizing.
+
+eg:
+-----------
+Internal capacity 6
+0   1  2  3  4  5
+10 20 30 
+
+size = 3
+capacity = 6
+
+Size tells how many elements exist. Capacity tells how much internal space is available.
+
+6. Constructors of ArrayList:
+--------------------------------
+1. Empty ArrayList:
+------------------
+ArrayList<String> names = new ArrayList<>();
+
+import java.util.ArrayList;
+
+public class EmptyList {
+    public static void main(String[] args) {
+        ArrayList<String> names = new ArrayList<>();
+        System.out.println("List: " + names);
+        System.out.println("Size: " + names.size());
+    }
+}
+
+
+2. Initial Capacity:
+-----------------------
+ArrayList<String> names = new ArrayList<>(50);
+
+import java.util.ArrayList;
+
+public class EmptyList {
+    public static void main(String[] args) {
+        ArrayList<String> names = new ArrayList<>(50);
+        System.out.println("List: " + names);
+        System.out.println("Size: " + names.size());
+    }
+}
+
+3. Create from another collection:
+-------------------------------------
+
+import java.util.ArrayList;
+
+public class EmptyList {
+    public static void main(String[] args) {
+        ArrayList<String> names = new ArrayList<>(50);
+        names.add("Naveen");
+        names.add("Vishnu");
+        names.add("megha");
+        System.out.println("List: " + names);
+        System.out.println("Size: " + names.size());
+        ArrayList<String> secondList = new ArrayList<>(names);
+        System.out.println(secondList);
+    }
+}
+
+Are names and secondList the same object?
+->No. They are separate list objects containing the same element references.
+
+Interface reference vs class reference:
+---------------------------------------
+ArrayList<String> names = new ArrayList<>();
+
+List<String> names = new ArrayList<>();
+trimtoSize() 
+which decided which methods are visible - the object type or reference?
+-> reference type 
+
+Why index access is fast in arrayList:
+-----------------------------------
+0  1   2   3   4   5
+A  B   C   D   E   F
+list.get(3);
+
+ArrayList is strong when we frequently read elements using indexes.
+
+What does traversal mean?
+-------------------------
+[Sri, Anu, Rahul]
+Traversal means visiting every element in a collection one by one.
+
+We traverse collections when we want to:
+->print all values
+->calculate a total
+->search for an element
+->update objects
+->check conditions
+->remove certain elements
+
+Traversing ArrayList Using a normal for loop:
+--------------------------------------------------
+import java.util.ArrayList;
+
+public class Forloop {
+    public static void main(String[] args) {
+    ArrayList<String> names = new ArrayList<>();
+    names.add("Sri");
+    names.add("Hari");
+    for(int i=0; i<names.size(); i++){
+        System.out.println(names.get(i));
+    }
+}
+}
+
+Use it when:
+----------
+->index is required
+->position matters
+->you want to update by index
+->you need previous or next element
+->you want to traverse only part of the list.
+
+How to update a list in traverse:
+--------------------------------------
+import java.util.ArrayList;
+
+public class Forloop {
+    public static void main(String[] args) {
+    ArrayList<Integer> names = new ArrayList<>();
+    names.add(70);
+     names.add(80);
+        names.add(90);
+    for(int i=0; i<names.size(); i++){
+        int a = names.get(i) + 5;
+        names.set(i,a);
+        // if(i==2){
+        //     names.set(2,78);
+        // }
+        // else{
+        //     continue;
+        // }
+    }
+        System.out.println(names);
+}
+}
+
+What is an enhanced forloop?
+----------------------------
+Sometimes we do not need the index to traverse a list. 
+It is also called as:
+->for-each loop
+->enhanced for loop
+
+Syntax:
+-----------
+for(DataType Variable : collection) {
+}
+DataType:
+---------
+The type of element stored in the collection.
+
+Variable:
+-----------------
+A temporary variable that receives one element at a time.
+
+Collection:
+----------------
+The collection we want to traverse.
+
+import java.util.ArrayList;
+
+public class Enhanced {
+    public static void main(String[] args) {
+        ArrayList<String> names = new ArrayList<>();
+        names.add("Sri");
+        names.add("Anu");
+        names.add("Rahul");
+        for(String name : names){
+            System.out.println(name);
+        }
+    }
+}
+
+import java.util.ArrayList;
+
+public class Enhanced {
+    public static void main(String[] args) {
+        // ArrayList<String> names = new ArrayList<>();
+        // names.add("Sri");
+        // names.add("Anu");
+        // names.add("Rahul");
+        ArrayList<Integer> names = new ArrayList<>();
+        names.add(70);
+        names.add(80);
+        names.add(90);
+        int total =0;
+        for(Integer name : names){
+       total = total + name;
+        }
+        System.out.println("Total:" + total);
+    }
+}
+
+Use when:
+-----------
+-> only values are needed
+->index is not used
+-> code should be shorter and cleaner
+-> mainly reading elements
+
+What is an Iterator?
+-------------------------
+An Iterator is an object used to traverse elements of a collection one by one.
+importing an iterator:
+--------------------
+import java.util.Iterator;
+
+Creating an Iterator:
+-------------------
+Iterator<DataType> iterator = collection.iterator();
+
+Iterator<DataType> -> iterator type 
+iterator -> reference variable
+collection.iterator() -> creates an iterator for that list.
+
+Main Iterator methods:
+--------------------------
+hasNext():
+----------------
+Checks whether another element is available.
+Returns 
+true -> if an element exists
+false -> if traversal is complete.
+
+next():
+-------
+Moves to the next element and return it.
+
+remove()
+------------
+Removes the last element returned by next().
+
+
+import java.util.ArrayList;
+import java.util.Iterator;
+public class IteratorExample {
+    public static void main(String[] args) {
+        ArrayList<String> names = new ArrayList<>();
+     names.add("Naveen");
+        names.add("Vishnu");
+        names.add("megha");
+        Iterator<String> it = names.iterator();
+        while(it.hasNext()) {
+            String name = it.next();
+            System.out.println(name);
+        }
+    }
+}
+
+
+At the Beginning:
+--------------------
+Iterator is before Naveen
+it -> Iterator Object
+iteration 1:
+-----------------
+ it, Naveen, Vishnu, Megha
+There is an element, so it returns true.
+
+name = Naveen
+Naveen is printed.
+
+iteration 2:
+-----------------
+ Naveen, it, Vishnu, Megha
+it.hasNext() -> true
+name = Vishnu
+ Vishnu is printed.
+
+iteration 3:
+-----------------
+ Naveen, Vishnu, it, Megha
+it.hasNext() -> true
+name = Megha
+Megha is printed.
+
+iteration 3:
+-----------------
+ Naveen, Vishnu,  Megha, it
+it.hasNext() -> false
+it exits while loop
